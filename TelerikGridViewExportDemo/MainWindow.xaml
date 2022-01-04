@@ -1,0 +1,45 @@
+﻿<Window x:Class="TelerikGridViewExportDemo.MainWindow"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+                xmlns:local="clr-namespace:TelerikGridViewExportDemo"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    
+    <Window.Resources>
+        <local:BooleanToYesNo x:Key="YesNoCx" />
+    </Window.Resources>
+
+    <StackPanel Margin="15 0 15 0 ">
+        <telerik:RadGridView x:Name="GridView1" ShowColumnFooters="True" AutoGenerateColumns="False" IsReadOnly="True" RowIndicatorVisibility="Collapsed">
+            <telerik:RadGridView.Columns>
+
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Break, Converter={StaticResource YesNoCx}}" Header="Very Long Column">
+                    <telerik:GridViewDataColumn.AggregateFunctions>
+                        <local:CustomFunction ResultFormatString="Count: {0}"/>
+                    </telerik:GridViewDataColumn.AggregateFunctions>
+                </telerik:GridViewDataColumn>
+
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Lunch}" Header="Lunch">
+                    <telerik:GridViewDataColumn.AggregateFunctions>
+                        <local:CustomTsAvgFunction ResultFormatString="Avg: {0}"/>
+                    </telerik:GridViewDataColumn.AggregateFunctions>
+                </telerik:GridViewDataColumn>
+
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding TemperatureC}" Header="TemperatureC" FooterTextAlignment="Right" >
+                    
+                    <telerik:GridViewDataColumn.AggregateFunctions>
+                        <telerik:CountFunction ResultFormatString="Count: {0}" />
+                        <telerik:AverageFunction ResultFormatString="Avg: {0:F2}" />
+                    </telerik:GridViewDataColumn.AggregateFunctions>
+                </telerik:GridViewDataColumn>
+
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding TemperatureF}" Header="TemperatureF two three four" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Summary}" Header="Summary" />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <StackPanel Orientation="Horizontal">
+            <telerik:RadButton Margin="0 10 0 0" Width="75" HorizontalAlignment="Left" x:Name="ExportButton" Content="Export" Click="ExportButton_Click" />
+            <telerik:RadButton Margin="10 10 0 0" Width="75" HorizontalAlignment="Left" x:Name="UnselectButton" Content="Unselect row" Click="UnselectButton_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikGridViewExportDemo", "TelerikGridViewExportDemo\TelerikGridViewExportDemo.csproj", "{90124054-A234-4D1A-88A0-B614D9043BDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F46647D1-D3A3-4B71-987B-72D45DF72B74}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90124054-A234-4D1A-88A0-B614D9043BDA}.Debug|x86.ActiveCfg = Debug|x86
+		{90124054-A234-4D1A-88A0-B614D9043BDA}.Debug|x86.Build.0 = Debug|x86
+		{90124054-A234-4D1A-88A0-B614D9043BDA}.Release|x86.ActiveCfg = Release|x86
+		{90124054-A234-4D1A-88A0-B614D9043BDA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F102F2E9-502D-4D7A-B850-6363122115DC}
+	EndGlobalSection
+EndGlobal
