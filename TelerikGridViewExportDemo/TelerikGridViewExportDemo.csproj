@@ -116,6 +116,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\TelerikGridViewExportDemo.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,6 +126,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\de\Telerik.Windows.Controls.resources.dll" />
+    <Content Include="bin\Debug\es\Telerik.Windows.Controls.resources.dll" />
+    <Content Include="bin\Debug\fr\Telerik.Windows.Controls.resources.dll" />
+    <Content Include="bin\Debug\it\Telerik.Windows.Controls.resources.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Resource Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\nl\Telerik.Windows.Controls.resources.dll" />
+    <Content Include="bin\Debug\Telerik.Windows.Controls.dll" />
+    <Content Include="bin\Debug\Telerik.Windows.Controls.GridView.dll" />
+    <Content Include="bin\Debug\Telerik.Windows.Controls.GridView.Export.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Controls.GridView.Export.xml" />
+    <Resource Include="bin\Debug\Telerik.Windows.Controls.GridView.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Controls.Input.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Controls.Input.xml" />
+    <Resource Include="bin\Debug\Telerik.Windows.Controls.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Data.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Data.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.Core.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.Core.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.dll" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.Fixed.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.Fixed.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.Flow.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.Flow.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.FormatProviders.OpenXml.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.FormatProviders.OpenXml.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.Spreadsheet.dll" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.Spreadsheet.xml" />
+    <Resource Include="bin\Debug\Telerik.Windows.Documents.xml" />
+    <Content Include="bin\Debug\Telerik.Windows.Zip.dll" />
+    <Resource Include="bin\Debug\Telerik.Windows.Zip.xml" />
+    <Content Include="bin\Debug\TelerikGridViewExportDemo.exe" />
+    <Content Include="bin\Debug\TelerikGridViewExportDemo.pdb" />
+    <Content Include="bin\Debug\tr\Telerik.Windows.Controls.resources.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
