@@ -61,6 +61,21 @@ namespace TelerikGridViewExportDemo
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            IEnumerable<WeatherForecast> data =  GetJsonStringSampleData(); //GetSampleData();
+
+            GridView1.ItemsSource = data;
+        }
+        private static IEnumerable<WeatherForecast> GetSampleData()
+        {
+            var list = new List<WeatherForecast>()
+            {
+                new WeatherForecast() { Summary="rschilly"}
+            };
+            return list;
+        }
+
+        private static IEnumerable<WeatherForecast> GetJsonStringSampleData()
+        {
             var content = "[" +
                 "{ \"break\":\"true\", \"lunch\":\"2:00:00\", \"temperatureC\":11,\"temperatureF\":51,\"summary\":\"Chilly\"}," +
                 "{ \"break\":\"false\", \"lunch\":\"5:00:00\", \"temperatureC\":20,\"temperatureF\":67,\"summary\":\"Scorching\"}," +
@@ -68,8 +83,7 @@ namespace TelerikGridViewExportDemo
                 "{ \"break\":\"true\", \"lunch\":\"3:00:00\", \"temperatureC\":-10,\"temperatureF\":15,\"summary\":\"Warm\"}," +
                 "{ \"break\":\"true\", \"lunch\":\"1:00:00\", \"temperatureC\":-10,\"temperatureF\":15,\"summary\":\"Cool\"}]";
             var data = JsonConvert.DeserializeObject<IEnumerable<WeatherForecast>>(content);
-
-            GridView1.ItemsSource = data;
+            return data;
         }
 
         //https://docs.telerik.com/devtools/wpf/controls/radgridview/export/how-to/column-of-cell
@@ -149,7 +163,7 @@ namespace TelerikGridViewExportDemo
             var itemCount = source.Count();
             if (itemCount > 0)
             {
-                var values = source.Where(i => i.Break.ToLower() == "true");
+                var values = source.Where(i => i.Break?.ToLower() == "true");
 
                 return values.Count();
             }
