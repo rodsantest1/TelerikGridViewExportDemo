@@ -7,7 +7,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Data;
+using System.Windows.Input;
 using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.GridView;
 using Telerik.Windows.Data;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
@@ -26,9 +28,22 @@ namespace TelerikGridViewExportDemo
 
             GridView1.ElementExportingToDocument += GridView1_ElementExportingToDocument;
 
-            GridView1.SelectionChanged += GridView1_SelectionChanged;
-            GridView1.SelectionChanging += GridView1_SelectionChanging;
-            GridView1.RowActivated += GridView1_RowActivated;
+            //GridView1.SelectionChanged += GridView1_SelectionChanged;
+            //GridView1.SelectionChanging += GridView1_SelectionChanging;
+            //GridView1.RowActivated += GridView1_RowActivated;
+
+            GridView1.AddHandler(RadGridView.MouseLeftButtonUpEvent, new MouseButtonEventHandler(GridView1_MouseLeftButtonUp), true);
+        }
+
+        private void GridView1_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var clickedElement = (FrameworkElement)e.OriginalSource;
+            var clickedRow = clickedElement.ParentOfType<GridViewRow>();
+            if (clickedRow != null)
+            {
+                WeatherForecast weather = clickedRow.Item as WeatherForecast;
+                MessageBox.Show(weather.Summary);
+            }
         }
 
         private void GridView1_RowActivated(object sender, Telerik.Windows.Controls.GridView.RowEventArgs e) { TestHandler(); }
